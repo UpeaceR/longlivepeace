@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.5">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">body {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>overflow: hidden; /* Empêche la barre de défilement */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background-color: #f0f0f0; /* Couleur de fond */</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.heart-container {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>top: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>left: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>transform: translate(-50%, -50%);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width: 200px; /* Ajustez la taille du conteneur */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 200px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.heart {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width: 50px; /* Taille des cœurs */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 50px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background-color: red; /* Couleur de base des cœurs */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>transform: rotate(-45deg);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>animation: beat 1s infinite alternate; /* Animation de battement */</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.heart::before,</p>
+<p class="p1">.heart::after {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>content: "";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width: 50px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 50px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background-color: red;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.heart::before {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>top: -25px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>left: 0;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.heart::after {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>left: 25px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>top: 0;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.russian-heart {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background-color: #D52B1E; /* Couleur du drapeau russe */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>left: 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>animation-delay: 0.2s; /* Décalage pour un effet plus dynamique */</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.russian-heart::before,</p>
+<p class="p1">.russian-heart::after {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background-color: #D52B1E;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.ukrainian-heart {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background-color: #0057B7; /* Couleur du drapeau ukrainien */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>left: 100px; /* Position initiale */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>animation-delay: 0.4s;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.ukrainian-heart::before,</p>
+<p class="p1">.ukrainian-heart::after {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background-color: #0057B7;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">@keyframes beat {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>0% {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>transform: rotate(-45deg) scale(1);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>100% {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>transform: rotate(-45deg) scale(1.1);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1">}</p>
+</body>
+</html>
