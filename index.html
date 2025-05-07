@@ -14,9 +14,8 @@
     body, html {
       height: 100%;
       font-family: 'Arial', sans-serif;
-      font-weight: 800;
       overflow: hidden;
-      background: linear-gradient(135deg, #f0f0f0, #aaaaaa);
+      background: linear-gradient(135deg, #f0f0f0, #dddddd);
     }
 
     .heart {
@@ -65,7 +64,7 @@
 
     .message {
       position: absolute;
-      top: 50%;
+      top: 45%;
       left: 50%;
       transform: translate(-50%, -50%);
       font-size: 4rem;
@@ -93,6 +92,19 @@
       color: #d52b1e; /* rouge russe */
     }
 
+    .subtitle {
+      position: absolute;
+      top: 58%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.5rem;
+      color: #555;
+      font-style: italic;
+      z-index: 10;
+      opacity: 0;
+      animation: fadeIn 2s ease-in-out 2s forwards;
+    }
+
     @keyframes popIn {
       from {
         transform: translate(-50%, -50%) scale(0);
@@ -101,6 +113,17 @@
       to {
         transform: translate(-50%, -50%) scale(1);
         opacity: 1;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translate(-50%, -40%);
+      }
+      to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
       }
     }
   </style>
@@ -112,33 +135,9 @@
     <span class="word peace">PEACE</span>
   </div>
 
+  <div class="subtitle">Si vis pacem, para pacem.</div>
+
   <script>
     const colors = [
       ['#005BBB', '#FFD500'], // Ukraine: blue and yellow
-      ['#eeeeee', '#0033a0', '#d52b1e'] // Russia: white, blue, red
-    ];
-
-    function createHeart() {
-      const heart = document.createElement('div');
-      heart.classList.add('heart');
-
-      // Randomly choose Ukraine or Russia
-      const country = Math.random() > 0.5 ? colors[0] : colors[1];
-      const color = country[Math.floor(Math.random() * country.length)];
-      heart.style.background = color;
-
-      heart.style.left = `${Math.random() * 100}vw`;
-      heart.style.animationDuration = `${5 + Math.random() * 5}s`;
-      heart.style.transform = `rotate(45deg) scale(${0.8 + Math.random() * 0.6})`;
-
-      document.body.appendChild(heart);
-
-      setTimeout(() => {
-        heart.remove();
-      }, 10000);
-    }
-
-    setInterval(createHeart, 200);
-  </script>
-</body>
-</html>
+      [']()
