@@ -69,10 +69,27 @@
       transform: translate(-50%, -50%);
       font-size: 4rem;
       font-weight: bold;
-      color: #222;
+      text-transform: uppercase;
       text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.6);
       z-index: 10;
       animation: popIn 2s ease-in-out forwards;
+    }
+
+    .word {
+      display: inline-block;
+      margin: 0 10px;
+    }
+
+    .long {
+      color: #FFD500; /* jaune ukrainien */
+    }
+
+    .live {
+      color: #005BBB; /* bleu ukrainien */
+    }
+
+    .peace {
+      color: #d52b1e; /* rouge russe */
     }
 
     @keyframes popIn {
@@ -88,7 +105,11 @@
   </style>
 </head>
 <body>
-  <div class="message">Long Live Peace</div>
+  <div class="message">
+    <span class="word long">LONG</span>
+    <span class="word live">LIVE</span>
+    <span class="word peace">PEACE</span>
+  </div>
 
   <script>
     const colors = [
